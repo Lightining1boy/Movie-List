@@ -1,22 +1,10 @@
-import App from './App.js';
+import MovieListEntry from './MovieListEntry.js'
 var MovieList = (props) => {
-	
-	if (props.filteredMovies.length !== 0) {
 		return (
 			<div>
-				{props.filteredMovies.map(movie => {
-					
-					return <div key={movie.title}>{movie.title} </div>
+				{props.displayMovies.map(movie => {
+					return <MovieListEntry movie = {movie} watchClick={props.watchClick}/>
 				})}
 			</div>)
-	}
-	else {
-		return (
-			<div>
-				{props.movies.map(movie => {
-					return <div key={movie.title}>{movie.title} </div>
-				})}
-			</div>)
-		}
 }
 export default MovieList;

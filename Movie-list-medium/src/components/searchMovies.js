@@ -1,4 +1,4 @@
-import ListOfMoviesMap from './MovieList.js'
+
 class SearchMovies extends React.Component {
   constructor(props) {
     super(props)
@@ -6,7 +6,6 @@ class SearchMovies extends React.Component {
       value: ''
     };
     this.handleChange = this.handleChange.bind(this);
-    
   }
   handleChange(event) {
     this.setState({value: event.target.value})
